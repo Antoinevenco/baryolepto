@@ -1,0 +1,75 @@
+.about {
+    h1 {
+        font-size: 80px;
+        line-height: 80px;
+        //margin-bottom: 30vh;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-size: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+    }
+
+    .hero-about-section {
+        margin-top: 104px;
+        height: auto;
+        margin-bottom: 216px;
+
+        div {
+            justify-content: space-between;
+            div:first-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 70%;
+            }
+
+            div:last-child {
+                width: 25%;
+                height: auto;
+                margin-top: 200px;
+
+                img {
+                    max-width: 100%;
+                    //object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .team-section {
+        .main-container {
+            h2 {
+                text-align: right;
+                width: 100%;
+                margin-bottom: 80px;
+                text-decoration: uppercase;
+            }
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                div {
+                    margin-left: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 45%;
+
+                    p:first-child {
+                        margin-bottom: 80px;
+                    }
+                }
+
+                img {
+                    width: 30%;
+                    margin-left: 10%;
+                }
+            }
+        }
+    }
+}

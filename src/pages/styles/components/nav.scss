@@ -1,0 +1,19 @@
+.nav-temp {
+    width: calc(100% - 40px);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    left: 20px;
+    z-index: 9999;
+    top: 20px;
+
+    p {
+        font-family: Halogen;
+    }
+    div {
+        a {
+            margin-left: 16px;
+        }
+    }
+}

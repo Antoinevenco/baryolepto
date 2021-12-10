@@ -1,0 +1,164 @@
+* {
+    color: white;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.work {
+    .featured-projects-section {
+        padding-top: 152px;
+        width: 100%;
+        margin-bottom: 204px;
+
+        .heading-projects {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 48px;
+
+            h1 {
+                font-size: 96px;
+                line-height: 96px;
+                text-transform: uppercase;
+                margin-right: 16px;
+            }
+
+            h2  {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        .projects-items-wrapper {
+            width: 100%;
+            display: flex;
+            flex-flow: column wrap;
+
+            .project-item {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 318px;
+                padding: 8px 0px;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+
+                .project-item-content-wrapper {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+
+                    h3 {
+                        font-size: 24px;
+                        line-height: 32px;
+                        margin-right: 8px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+
+                    .upper-text {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        text-transform: uppercase;
+
+                        p {
+                            opacity: 60%;
+                        }
+                    }
+
+                    .bottom-text {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-end;
+
+                        p {
+                            font-size: 14px;
+                            margin-right: 8px;
+                            font-family: Neue Machina;
+                        }
+                    }
+                }
+
+                .framer-image {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    object-fit: cover;
+                    overflow: hidden;
+
+                    img {
+                        max-width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .archive-project-section {
+        width: 100%;
+
+        h2 {
+            margin-bottom: 48px;
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        .archive-projects-wrapper {
+            width: 100%;
+
+            .project-item {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 40px 0px;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+                width: auto;
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    p {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+
+                .first-text {
+                    text-transform: uppercase;
+
+                    h3 {
+                        margin-right: 8px;
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+
+                    p {
+                        opacity: 60%;
+                    }
+                }
+
+                .last-text {
+                    p:first-child {
+                        margin-right: 8px;
+                    }
+                    p {
+                        font-family: Neue Machina;
+                    }
+                }
+            }
+        }
+    }
+}
