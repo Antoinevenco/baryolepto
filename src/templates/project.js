@@ -7,12 +7,33 @@ import '../styles/templates/project.scss'
 export default function Project({ pageContext }) {
     const { project } = pageContext
 
+    const meta = {
+        transition: {
+            when: 'beforeChildren',
+            staggerChildren: 0.3,
+        },
+    }
+
+    const stagger = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+    }
+
     return (
         <div className="project-template">
             <section className="hero-project-section">
                 <div className="project-hero-container">
                     <div className="heading-project">
-                        <h1 layoutId={project.title}>{project.title}</h1>
+                        <motion.h1
+                            transition={{
+                                type: 'spring',
+                                stiffness: 100,
+                                damping: 20,
+                            }}
+                            layoutId={project.title}
+                        >
+                            {project.title}
+                        </motion.h1>
                         <AnimImage
                             key={project.featuredImage.childImageSharp.id}
                             alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
@@ -23,22 +44,45 @@ export default function Project({ pageContext }) {
                             id={project.featuredImage.childImageSharp.id}
                         />
                     </div>
-                    <div className="meta-project">
-                        <div>
+                    <motion.div
+                        variants={meta}
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{
+                            delay: 0.1,
+                            type: 'spring',
+                            stiffness: 100,
+                            damping: 20,
+                        }}
+                        className="meta-project"
+                    >
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants="stagger"
+                        >
                             <h2>Year</h2>
                             <p>{project.year}</p>
-                        </div>
-                        <div>
+                        </motion.div>
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants="stagger"
+                        >
                             <h2>Client</h2>
                             <p>{project.client}</p>
-                        </div>
-                        <div>
+                        </motion.div>
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants="stagger"
+                        >
                             <h2>skills</h2>
                             {project.skills.map((skills) => {
                                 return <p>{skills}</p>
                             })}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
 

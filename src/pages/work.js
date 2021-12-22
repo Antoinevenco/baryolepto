@@ -20,7 +20,16 @@ const ProjectItem = ({ title, client, skills, image, slug }) => {
             <motion.div className="project-item">
                 <div className="project-item-content-wrapper">
                     <div className="upper-text">
-                        <h3>{title}</h3>
+                        <motion.h3
+                            transition={{
+                                type: 'spring',
+                                stiffness: 100,
+                                damping: 20,
+                            }}
+                            layoutId={title}
+                        >
+                            {title}
+                        </motion.h3>
                         <p>{client}</p>
                     </div>
                     <div className="bottom-text">
@@ -90,6 +99,7 @@ const Work = ({ data }) => {
                                             skills={skills}
                                             image={featuredImage}
                                             slug={slug}
+                                            key={slug}
                                         />
                                     )
                                 }
