@@ -14,24 +14,33 @@ const AboutPage = () => {
     return (
         <div className="about">
             <section className="hero-about-section">
-                <div className="main-container h-align">
+                <div className="main-container ">
+                    <h1>
+                        Baryo&Lepto
+                        <br />
+                        <span className="oblspan">
+                            <i>is more than</i>
+                        </span>
+                        <br />
+                        a studio,
+                        <br />
+                        <span className="oblspan">
+                            <i>it’s a</i>
+                        </span>
+                        <br />
+                        state of mind.
+                    </h1>
                     <div>
-                        <h1>
-                            Baryo&Lepto is more than a studio, it’s a state of
-                            mind.
-                        </h1>
+                        <img src={imgAbout01} alt="" />
                         <p>
                             Animated by curiosity, wishing above all to honor
                             the world of images.
                         </p>
                     </div>
-                    <div>
-                        <img src={imgAbout01} alt="" />
-                    </div>
                 </div>
             </section>
             <section className="team-section">
-                <div className="main-container v-align">
+                <div className="main-container ">
                     <h2>We don't have talent.We are a team of individuals</h2>
                     <div>
                         <img src={imgAbout01} alt="" />

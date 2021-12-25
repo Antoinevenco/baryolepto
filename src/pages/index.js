@@ -2,6 +2,7 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import Menuu from '../components/menuu.js'
 
 //Import styles
 import './styles/app.scss'
@@ -13,6 +14,7 @@ import Scene from '../components/Scene'
 const IndexPage = ({ data }) => {
     return (
         <div className="index">
+            <Menuu />
             <div className="model">
                 <Scene />
             </div>

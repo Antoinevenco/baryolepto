@@ -1,0 +1,48 @@
+.menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: absolute;
+
+    .titlemenu {
+        font-size: 14px;
+        font-family: halogen;
+    }
+    .itemmenu {
+        font-size: 48px;
+    }
+
+    .itemswrapper {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .leftmenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background-color: #28282d;
+    }
+
+    .rightmenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background-color: white;
+
+        .titlemenu {
+            color: #28282d;
+        }
+        .itemmenu {
+            color: #28282d;
+        }
+    }
+}
