@@ -34,17 +34,21 @@
                     text-transform: uppercase;
                 }
 
-                .framer-image {
-                    height: 80%;
-                    max-width: 60%;
+                .framer-image-wrapper {
+                    width: 400px;
+                    height: 800px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
                     position: relative;
-                    div {
-                        width: 100%;
+                    .framer-image {
+                        position: absolute;
+                        width: fit-content;
                         height: 100%;
-                    }
-
-                    img {
-                        object-fit: cover;
+                        .gatsby-image-wrapper {
+                            height: 100%;
+                        }
                     }
                 }
             }

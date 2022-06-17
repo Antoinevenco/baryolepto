@@ -6,16 +6,31 @@ export const AnimImage = ({ image, alt, id }) => {
     console.log(id)
     return (
         <motion.div
+            className="framer-image-wrapper"
+            layoutId={`${id}-wrapper`}
             transition={{
                 type: 'spring',
                 stiffness: 100,
                 damping: 20,
             }}
-            className="framer-image"
-            layoutId={id}
-            layout
         >
-            <GatsbyImage loading="eager" image={image} alt={alt} />
+            <motion.div
+                transition={{
+                    type: 'spring',
+                    stiffness: 100,
+                    damping: 20,
+                }}
+                layoutId={`${id}`}
+                layout
+                className="framer-image"
+            >
+                <GatsbyImage
+                    objectFit="none"
+                    loading="eager"
+                    image={image}
+                    alt={alt}
+                />
+            </motion.div>
         </motion.div>
     )
 }

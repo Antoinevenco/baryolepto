@@ -4,6 +4,9 @@
     text-decoration: none;
 }
 
+.project-template {
+}
+
 .work {
     .featured-projects-section {
         padding-top: 152px;
@@ -86,18 +89,18 @@
                     }
                 }
 
-                .framer-image {
+                .framer-image-wrapper {
                     width: 50%;
                     height: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    object-fit: cover;
                     overflow: hidden;
-
-                    img {
-                        max-width: 100%;
-                        object-fit: cover;
+                    position: relative;
+                    .framer-image {
+                        position: absolute;
+                        width: fit-content;
+                        height: fit-content;
                     }
                 }
             }
